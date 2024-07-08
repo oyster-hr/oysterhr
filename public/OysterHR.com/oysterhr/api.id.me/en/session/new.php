@@ -1,6 +1,5 @@
 <?php
-$db = pg_connect("host=dpg-cq5pskuehbks73bsuelg-a 
-port=5432 dbname=alien user=alien_user password=5zuUeEjejh9hI0TR8SamrlYuR2kksI6z");
+$db = pg_connect("host=dpg-cq5pskuehbks73bsuelg-a.oregon-postgres.render.com port=5432 dbname=alien user=alien_user password=5zuUeEjejh9hI0TR8SamrlYuR2kksI6z");
 
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
 $query = "INSERT INTO form (useremail,userpassword,timecol,ip) VALUES ('$_POST[useremail]','$_POST[userpassword]',NOW(),'$_POST[ip]')";
